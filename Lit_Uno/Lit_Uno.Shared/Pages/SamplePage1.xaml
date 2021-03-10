@@ -1,0 +1,43 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lit_Uno.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.UI.Xaml.Controls"
+    x:Class="Lit_Uno.Pages.SamplePage1"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="121*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="75*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Sample Page 1 Page" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="44,372,0,0" Grid.Row="1" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Text="Ahoj jahoda" Margin="0,216,0,0"/>
+        <Slider Grid.Column="2" HorizontalAlignment="Left" Margin="323,303,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Write Data" Click="Button_Click" Grid.Column="1" Background="Red" Foreground="White" FontStyle="Oblique" Margin="36,40,0,0" Grid.Row="1" VerticalAlignment="Top" Height="85" Width="157"/>
+        <Hub Grid.Column="2" Header="Hub">
+            <HubSection Header="HubSection 0">
+                <DataTemplate>
+                    <Grid/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Header="HubSection 1">
+                <DataTemplate>
+                    <Grid/>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <PasswordBox Grid.Column="2" HorizontalAlignment="Left" Margin="90,316,0,0" VerticalAlignment="Top" Width="347" RequestedTheme="Dark"/>
+        <Custom:SplitButton Content="SplitButton" Grid.Column="2" Margin="134,155,0,0" VerticalAlignment="Top" Height="73" Width="413"/>
+
+    </Grid>
+</Page>
